@@ -48,6 +48,14 @@ Within each tab, you can further divide the content into sections. Sections act 
 Tab:CreateSection("Buttons")
 ```
 
+## Labels
+
+People dumb/stupid and can't read? Plaster a label right in front of them:
+
+```lua
+Tab:CreateLabel("Label")
+```
+
 ## Buttons
 
 Buttons are interactive elements that execute when clicked (I can't believe I have to explain this). You can define a button's name and associate a callback function to perform actions like resetting a character or triggering an event:
