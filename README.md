@@ -32,6 +32,7 @@ local Window = DevTools:Init({
 
 DevTools offers some essential features to help you build a powerful development interface:
 
+# Elements
 ## Tabs
 
 Tabs allow you to organize related features or functionalities. You can create multiple tabs to represent different categories, here's an example:
@@ -90,6 +91,25 @@ game:GetService("RunService").RenderStepped:Connect(function()
 end)
 ```
 
+## Sliders
+
+Sliders are a great way for a user to input a number between a range set by you. These are primarily used for WalkSpeed and JumpPower cheats:
+
+```lua
+local Slider = Tab:CreateSlider({
+	Name = "Speed",
+	Suffix = "Studs",
+	
+	Range = {16, 100},
+	Interval = 1,
+	Default = 16,
+	
+	Callback = function(Value)
+		DevTools.Player:SetSpeed(Value)
+	end,
+})
+```
+
 ## Input Fields
 
 DevTools provides input fields, you can create simple input fields or larger input fields based on your needs. These fields enable you to gather text from the user. Inputs will execute your callback with the text value when changed:
@@ -103,7 +123,15 @@ Tab:CreateInput({
 })
 ```
 
-## Example Script
+## Updating an element
+
+Need to update an element manually? We've (finally) released a way to update them:
+
+```lua
+Element:Update(Value, RunCallback)
+```
+
+# Example Script
 
 Here's everything put together:
 
