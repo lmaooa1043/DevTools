@@ -46,7 +46,7 @@ local Tab = Window:CreateTab({ Name = "Player", Icon = "rbxassetid://6034287594"
 Within each tab, you can further divide the content into sections. Sections act as titles to divide your features yet again, making a visually appealing and spacious interface
 
 ```lua
-Tab:CreateSection("Buttons")
+local Section = Tab:CreateSection("Buttons")
 ```
 
 ## Labels
@@ -54,7 +54,7 @@ Tab:CreateSection("Buttons")
 People dumb/stupid and can't read? Plaster a label right in front of them:
 
 ```lua
-Tab:CreateLabel("Label")
+local Label = Tab:CreateLabel("Label")
 ```
 
 ## Buttons
@@ -62,7 +62,7 @@ Tab:CreateLabel("Label")
 Buttons are interactive elements that execute when clicked (I can't believe I have to explain this). You can define a button's name and associate a callback function to perform actions like resetting a character or triggering an event:
 
 ```lua
-Tab:CreateButton({
+local Button = Tab:CreateButton({
     Name = "Reset Character",
     Callback = function()
         DevTools.Player:Kill()
@@ -77,7 +77,7 @@ Toggles are interactive switches that enable or disable specific functionalities
 ```lua
 local LoopReset = false
 
-Tab:CreateToggle({
+local Toggle = Tab:CreateToggle({
     Name = "Loop Reset Character",
     Callback = function(Value)
         LoopReset = Value
@@ -115,7 +115,7 @@ local Slider = Tab:CreateSlider({
 DevTools provides input fields, you can create simple input fields or larger input fields based on your needs. These fields enable you to gather text from the user. Inputs will execute your callback with the text value when changed:
 
 ```lua
-Tab:CreateInput({
+local Input = Tab:CreateInput({
     Name = "Input",
     Callback = function(Value)
         print(Value)
