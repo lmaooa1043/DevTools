@@ -1,3 +1,5 @@
+-- This is reserved for loadstring testing
+
 local Release = "v0.0.0"
 local ConfigFolder = "devtools"
 local ConfigExtension = ".ssync"
