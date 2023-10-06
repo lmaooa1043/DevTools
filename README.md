@@ -3,6 +3,8 @@
 ## Why we discontinued DevTools
 DevTools was central to a bunch of projects, but most of it's user base leaned on it for exploits in Roblox. Now that they've patched said exploits, our users have dwindled. Feel free to fork it, but I can't be bothered to keep updating what's clearly a sinking ship. Cheers!
 
+---
+
 Version: `Alpha 3.5`
 
 DevTools provides various features and functionalities that can be integrated into your script to streamline the development process. The library is constantly evolving, and your feedback is highly appreciated. If you find any bugs, please join our [Discord server](https://discord.com/invite/RZHFJjXd3m).
