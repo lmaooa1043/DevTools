@@ -95,7 +95,7 @@ function CreateBlankWindow()
 	Topbar.Divider.BackgroundTransparency = 1
 	Topbar.Logo.ImageTransparency = 1
 
-	Main.Size = UDim2.new(0, 3000, 0, 200)
+	Main.Size = UDim2.new(0, 300, 0, 200)
 
 	Main.BackgroundTransparency = 1
 	Shadow.ImageTransparency = 1
@@ -211,7 +211,7 @@ function DevTools:Init(Settings)
 		TweenService:Create(Topbar.Divider, TweenInfo.new(.1), { BackgroundTransparency = 0 }):Play()
 
 		TweenService:Create(Shadow, TweenInfo.new(.1), { ImageTransparency = .4 }):Play()
-		TweenService:Create(Main, TweenInfo.new(.1), { Size = UDim2.new(0, 600, 0, 400), Position = Main.Position + UDim2.new(0, 0, 0, math.ceil(475 / 2) - 22) }):Play()
+		TweenService:Create(Main, TweenInfo.new(.1), { Size = UDim2.new(0, 550, 0, 350), Position = Main.Position + UDim2.new(0, 0, 0, math.ceil(475 / 2) - 22) }):Play()
 	end
 
 	-- // Initiate UI // --
@@ -273,7 +273,7 @@ function DevTools:Init(Settings)
 
 	task.wait(.4)
 
-	TweenService:Create(Main, TweenInfo.new(1.2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 600, 0, 400) }):Play()
+	TweenService:Create(Main, TweenInfo.new(1.2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 550, 0, 350) }):Play()
 	task.wait(1.3)
 
 	TweenService:Create(Profile.Avatar, TweenInfo.new(.8), { ImageTransparency = 0 }):Play()
