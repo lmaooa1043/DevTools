@@ -158,7 +158,7 @@ function DevTools:Init(Settings)
 		end)
 	end
 	
---[[	function Window:Minimise()
+--	function Window:Minimise()
 		local Main = Interface:WaitForChild("Main")
 		local ShadowFrame = Main:WaitForChild("Shadow")
 		local Shadow = ShadowFrame:WaitForChild("ImageLabel")
@@ -185,7 +185,7 @@ function DevTools:Init(Settings)
 		TweenService:Create(Main, TweenInfo.new(.2), { Size = UDim2.new(0, 550, 0, 45), Position = Main.Position - UDim2.new(0, 0, 0, math.ceil(475 / 2) - 22) }):Play()
 	end
 	
-	function Window:Maximise()
+--	function Window:Maximise()
 		local Interface = Window.Interface
 
 		local Main = Interface:WaitForChild("Main")
@@ -211,8 +211,8 @@ function DevTools:Init(Settings)
 		TweenService:Create(Topbar.Divider, TweenInfo.new(.1), { BackgroundTransparency = 0 }):Play()
 
 		TweenService:Create(Shadow, TweenInfo.new(.1), { ImageTransparency = .4 }):Play()
-		TweenService:Create(Main, TweenInfo.new(.1), { Size = UDim2.new(0, 600, 0, 400), Position = Main.Position + UDim2.new(0, 0, 0, math.ceil(475 / 2) - 22) }):Play()
-	end]]
+		TweenService:Create(Main, TweenInfo.new(.1), { Size = UDim2.new(0, 500, 0, 350), Position = Main.Position + UDim2.new(0, 0, 0, math.ceil(475 / 2) - 22) }):Play()
+	end
 
 	-- // Initiate UI // --
 
@@ -273,7 +273,7 @@ function DevTools:Init(Settings)
 
 	task.wait(.4)
 
-	TweenService:Create(Main, TweenInfo.new(1.2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 600, 0, 400) }):Play()
+	TweenService:Create(Main, TweenInfo.new(1.2, Enum.EasingStyle.Quint, Enum.EasingDirection.InOut), { Size = UDim2.new(0, 500, 0, 350) }):Play()
 	task.wait(1.3)
 
 	TweenService:Create(Profile.Avatar, TweenInfo.new(.8), { ImageTransparency = 0 }):Play()
