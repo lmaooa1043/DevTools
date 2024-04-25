@@ -108,7 +108,7 @@ function DevTools:Init(Settings)
 	local Interface = CreateBlankWindow()
 
 	Window.Interface = Interface
-	Window._MINIMISED = false
+--	Window._MINIMISED = false
 
 	local Main = Interface:WaitForChild("Main")
 	local ShadowFrame = Main:WaitForChild("Shadow")
@@ -158,7 +158,7 @@ function DevTools:Init(Settings)
 		end)
 	end
 	
-	function Window:Minimise()
+--[[	function Window:Minimise()
 		local Main = Interface:WaitForChild("Main")
 		local ShadowFrame = Main:WaitForChild("Shadow")
 		local Shadow = ShadowFrame:WaitForChild("ImageLabel")
@@ -212,7 +212,7 @@ function DevTools:Init(Settings)
 
 		TweenService:Create(Shadow, TweenInfo.new(.1), { ImageTransparency = .4 }):Play()
 		TweenService:Create(Main, TweenInfo.new(.1), { Size = UDim2.new(0, 600, 0, 400), Position = Main.Position + UDim2.new(0, 0, 0, math.ceil(475 / 2) - 22) }):Play()
-	end
+	end]]
 
 	-- // Initiate UI // --
 
@@ -285,7 +285,7 @@ function DevTools:Init(Settings)
 	TweenService:Create(Sidebar, TweenInfo.new(.8), { BackgroundTransparency = 0 }):Play()
 	TweenService:Create(Topbar, TweenInfo.new(.8), { BackgroundTransparency = 0 }):Play()
 	TweenService:Create(Topbar.TextLabel, TweenInfo.new(.8), { TextTransparency = 0 }):Play()
-	TweenService:Create(Topbar.Minimise, TweenInfo.new(.8), { ImageTransparency = 0 }):Play()
+	--TweenService:Create(Topbar.Minimise, TweenInfo.new(.8), { ImageTransparency = 0 }):Play()
 	TweenService:Create(Topbar.Close, TweenInfo.new(.8), { ImageTransparency = 0 }):Play()
 	TweenService:Create(Topbar.Divider, TweenInfo.new(.8), { BackgroundTransparency = 0 }):Play()
 
@@ -313,7 +313,7 @@ function DevTools:Init(Settings)
 		Main:Destroy()
 	end)
 
-	Topbar.Minimise.MouseButton1Click:Connect(function()
+--[[	Topbar.Minimise.MouseButton1Click:Connect(function()
 		if Window._MINIMISED then
 			TweenService:Create(Topbar.Minimise.Maximise, TweenInfo.new(.1), { ImageTransparency = 1 }):Play()
 			TweenService:Create(Topbar.Minimise, TweenInfo.new(.2), { Rotation = 0 }):Play()
@@ -327,7 +327,7 @@ function DevTools:Init(Settings)
 		end
 
 		Window._MINIMISED = not Window._MINIMISED
-	end)
+	end)]]
 
 	if Settings.Options and Settings.Options.KillYourself and Player.Character then
 		Player.Character:BreakJoints()
