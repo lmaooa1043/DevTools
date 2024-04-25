@@ -182,7 +182,7 @@ function DevTools:Init(Settings)
 		TweenService:Create(Topbar.Divider, TweenInfo.new(.2), { BackgroundTransparency = 1 }):Play()
 
 		TweenService:Create(Shadow, TweenInfo.new(.2), { ImageTransparency = .9 }):Play()
-		TweenService:Create(Main, TweenInfo.new(.2), { Size = UDim2.new(0, 750, 0, 45), Position = Main.Position - UDim2.new(0, 0, 0, math.ceil(475 / 2) - 22) }):Play()
+		TweenService:Create(Main, TweenInfo.new(.2), { Size = UDim2.new(0, 550, 0, 45), Position = Main.Position - UDim2.new(0, 0, 0, math.ceil(475 / 2) - 22) }):Play()
 	end
 	
 	function Window:Maximise()
