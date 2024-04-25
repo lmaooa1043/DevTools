@@ -97,7 +97,7 @@ function CreateBlankWindow()
 	Topbar.Divider.BackgroundTransparency = 1
 	Topbar.Logo.ImageTransparency = 1
 
-	Main.Size = UDim2.new(0, 400, 0, 250)
+	Main.Size = UDim2.new(0, 200, 0, 150)
 
 	Main.BackgroundTransparency = 1
 	Shadow.ImageTransparency = 1
